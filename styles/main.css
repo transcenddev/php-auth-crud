@@ -1,0 +1,390 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'WulkanDisplayMedium';
+  src: url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Medium.otf') format('opentype'),
+    url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'WulkanDisplayItalic';
+  src: url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Italic.otf') format('opentype'),
+    url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Italic.otf') format('woff');
+}
+
+@font-face {
+  font-family: 'WulkanDisplayRegular';
+  src: url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Regular.otf') format('opentype'),
+    url('../assets/fonts/wulkan-display-2-0-font-1700461364-0/Wulkan-Display-Regular.otf') format('woff');
+}
+
+:root {
+  --color-primary: #000000;
+  --color-accent: #e4e6e8;
+  --color-bg: #ffffff;
+  --color-complimentary: #1E5128;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: white;
+}
+
+body {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: .9rem;
+  font-family: "Inter", system-ui;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Utility */
+
+.btn-back.flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: small;
+  margin: 1rem 0 0 1rem;
+  color: var(--color-complimentary);
+}
+
+
+.btn-primary {
+  width: 100%;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0rem;
+  /* Add margin here */
+  background-color: var(--color-complimentary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-modal-btn.btn-primary {
+  width: 100%;
+  max-width: 150px;
+}
+
+.close-modal-btn {
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Input and Label Design */
+
+.input-group {
+  padding: .5rem 0;
+}
+
+label {
+  display: block;
+  /* margin-bottom: 0.5rem; */
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background: var(--color-accent);
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+}
+
+/* Checkbox Design */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.checkbox-input:checked {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+/* Add a check icon using ::before pseudo-element */
+.checkbox-input:checked::before {
+  padding: 0rem .2rem;
+  content: '✔';
+  /* Unicode checkmark character */
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: white;
+  /* Color of the checkmark */
+  text-align: center;
+}
+
+.checkbox-label {
+  font-weight: 600;
+}
+
+.checkbox-label:hover {
+  text-decoration: underline;
+}
+
+
+.greetings {
+  /* font-weight: 400; */
+}
+
+
+/* =================== */
+
+.wrapper {
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+  padding: 2em 0em;
+}
+
+
+
+/* ======= hero ========= */
+
+section {
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  background-image: url(../assets/images/david-marcu-78A265wPiO4-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.hero {
+  /* background-image: url(../assets/images/david-marcu-78A265wPiO4-unsplash.jpg); */
+}
+
+.hero h1 {
+  font-family: 'WulkanDisplayMedium', serif;
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+
+.hero p {
+  text-align: center;
+}
+
+.hero h1 span {
+  font-family: 'WulkanDisplayItalic', serif;
+}
+
+.hero .flex {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shortdesc */
+
+.learn-more-section {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'WulkanDisplayMedium', serif !important;
+  font-size: 3rem;
+}
+
+.learn-more-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* ====================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+caption,
+th,
+td {
+  padding: 1rem;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+caption {
+  background-color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+th {
+  background: hsla(0, 0%, 100%, 1);
+  /* White with 50% transparency */
+}
+
+th:first-child {
+  border-top-left-radius: 20px;
+}
+
+th:last-child th {
+  background: hsl(0, 0%, 90%, 0.9);
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0, 0%, 90%, 0.3);
+}
+
+tr:hover {
+  background: hsl(0, 0%, 90%, 0.5);
+}
+
+@media (max-width: 650px) {
+  th {
+    display: none;
+  }
+
+  td {
+    display: grid;
+    grid-template-columns: 15ch auto;
+    gap: 0.5rem;
+    padding: .5rem 1rem;
+  }
+
+  td:first-child {
+    padding-top: 2rem;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  td:before {
+    content: attr(data-cell) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
+
+/* Modal */
+
+
+/* Add custom styles for the modal */
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+#modalContent {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* Add styles for the dimmed overlay */
+body.modal-open {}
+
+body.modal-open .dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  /* Adjust the opacity as needed */
+  z-index: 998;
+  /* Adjust the z-index to be below the modal */
+}
+
+
+footer {
+  font-size: x-small;
+  display: grid;
+  place-items: center;
+}
