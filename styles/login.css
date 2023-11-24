@@ -151,8 +151,12 @@ body {
   background-color: #e8e8e8;
 }
 
-.note {
+.text-bottom {
   font-size: 0.75rem;
-  color: #8B8E98;
+}
+
+.signup-link {
+  font-size: 0.75rem;
+  color: #1E5128;
   text-decoration: underline;
 }

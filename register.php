@@ -91,7 +91,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <button title="Sign In" type="submit" class="sign-in_btn">
       <span>Sign Up</span>
     </button>
-    <p class="note">Terms of use &amp; Conditions</p>
+    <div class="text-bottom">
+      <p class="note">Already have an account? <a href="login.php" class="signup-link">Signin</a></p>
+      <!-- <p class="note">Terms of use &amp; Conditions</p> -->
+    </div>
   </form>
       
   </body>

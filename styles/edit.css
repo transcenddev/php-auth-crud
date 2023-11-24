@@ -1,0 +1,41 @@
+:root {
+  --color-primary: #000000;
+  --color-accent: #e4e6e8;
+  --color-bg: #ffffff;
+  --color-complimentary: #1E5128;
+}
+
+.header {
+  padding: 1em;
+}
+
+.navbar-brand {}
+
+.navbar {}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list .flex {
+  margin-right: 1rem;
+}
+
+
+.nav-links {
+  color: var(--color-complimentary);
+  padding: 0.5rem;
+  /* border: 2px solid var(--color-complimentary);
+  border-radius: 20px; */
+}
+
+.material-icons-sharp {
+  margin: .5rem;
+}
+
+
+
+input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+}

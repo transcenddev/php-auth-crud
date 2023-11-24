@@ -109,6 +109,15 @@ a {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
 
+
+.material-icons-sharp {
+  color: var(--color-complimentary);
+}
+
+.btn-edit {}
+
+.btn-delete {}
+
 /* Input and Label Design */
 
 .input-group {

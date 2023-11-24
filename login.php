@@ -44,7 +44,7 @@
   <button title="Sign In" type="submit" class="sign-in_btn">
     <span>Sign In</span>
   </button>
-  <a href="register.php" class="note">Already have an account?</a>
+  <div class="text-bottom">Don't have an account? <a href="register.php" class="signup-link">Signup</a></div>
 </form>
 </body>
 </html>

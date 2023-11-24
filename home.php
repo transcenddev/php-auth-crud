@@ -17,7 +17,6 @@ $user = $_SESSION['user']; //assigns user value
     <meta name="description" content="php authentication crud, web design, web development">
     <link rel="icon" href="">
     <link rel="stylesheet" href="./styles/main.css">
-    
     <script src="./js/main.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   </head>
@@ -55,25 +54,6 @@ $user = $_SESSION['user']; //assigns user value
         </div>
       </div>
 
-      <script>
-        var openModalBtn = document.getElementById("openModalBtn");
-        var closeModalBtn = document.getElementById("closeModalBtn");
-        var modalOverlay = document.getElementById("modalOverlay");
-        var dimOverlay = document.getElementById("dimOverlay");
-
-        openModalBtn.addEventListener("click", function() {
-          modalOverlay.style.display = "block";
-          document.body.classList.add("modal-open");
-          dimOverlay.style.display = "block";
-        });
-
-        closeModalBtn.addEventListener("click", function() {
-          modalOverlay.style.display = "none";
-          document.body.classList.remove("modal-open");
-          dimOverlay.style.display = "none";
-        });
-      </script>
-
       <table>
         <tr>
           <th>ID</th>
@@ -104,14 +84,35 @@ $user = $_SESSION['user']; //assigns user value
             echo "<td data-cell='posted'>" . $row['date_posted'] . "-" . $row['time_posted'] . "</td>";
             echo "<td data-cell='edited'>" . $row['date_edited'] . "-" . $row['time_edited'] . "</td>";
             echo "<td data-cell='public'>" . $row['public'] . "</td>";
-            echo "<td data-cell='edit'><a href='edit.php?id=" . $row['id'] . "'>edit</a></td>";
-            echo "<td data-cell='delete'><a href='#' onclick='myFunction(" . $row['id'] . ")'>delete</a></td>";
+            echo "<td data-cell='edit'><a href='edit.php?id=" . $row['id'] . "'><span class='material-icons-sharp btn-edit'>edit</span></a></td>";
+            echo "<td data-cell='delete'><a href='#' onclick='myFunction(" . $row['id'] . ")'><span class='material-icons-sharp btn-delete'>
+            delete
+            </span></a></td>";
             
           echo "</tr>";
         }
         ?>
       </table>
     </div>
+
+    <script>
+        var openModalBtn = document.getElementById("openModalBtn");
+        var closeModalBtn = document.getElementById("closeModalBtn");
+        var modalOverlay = document.getElementById("modalOverlay");
+        var dimOverlay = document.getElementById("dimOverlay");
+
+        openModalBtn.addEventListener("click", function() {
+          modalOverlay.style.display = "block";
+          document.body.classList.add("modal-open");
+          dimOverlay.style.display = "block";
+        });
+
+        closeModalBtn.addEventListener("click", function() {
+          modalOverlay.style.display = "none";
+          document.body.classList.remove("modal-open");
+          dimOverlay.style.display = "none";
+        });
+    </script>
 
     <script>
       function myFunction(id) 
