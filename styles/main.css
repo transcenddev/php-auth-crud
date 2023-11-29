@@ -58,20 +58,36 @@ a {
 
 /* Utility */
 
-.btn-back.flex {
-  align-items: center;
-  justify-content: center;
+/* .navbar-dashboard {
+  margin: 1rem;
+} */
+
+/* .navbar-dashboard .nav-list {
+  list-style: none;
+} */
+
+.navbar-dashboard {
+  padding: 2rem;
+}
+
+.material-icons-sharp {
+  color: var(--color-complimentary);
+  transition: all .3s ease;
 }
 
 .btn-back {
-  position: absolute;
-  top: 0;
-  left: 0;
   font-size: small;
-  margin: 1rem 0 0 1rem;
   color: var(--color-complimentary);
+  transition: all .3s ease;
 }
 
+.btn-logout {
+  color: var(--color-complimentary);
+  border: 1px solid var(--color-complimentary);
+  border-radius: 20px;
+  padding: 0.5em 0.75em;
+  transition: all .3s ease;
+}
 
 .btn-primary {
   width: 100%;
@@ -88,7 +104,19 @@ a {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-logout:hover,
+.btn-primary:hover,
+.material-icons-sharp:hover {
+  opacity: 0.5;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-complimentary);
 }
 
 .open-modal-btn.btn-primary {
@@ -100,23 +128,8 @@ a {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-}
 
 
-.material-icons-sharp {
-  color: var(--color-complimentary);
-}
-
-.btn-edit {}
-
-.btn-delete {}
 
 /* Input and Label Design */
 
@@ -193,11 +206,6 @@ input[type="password"]:focus {
 
 .checkbox-label:hover {
   text-decoration: underline;
-}
-
-
-.greetings {
-  /* font-weight: 400; */
 }
 
 

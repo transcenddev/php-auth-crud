@@ -21,9 +21,10 @@ $user = $_SESSION['user']; //assigns user value
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   </head>
   <body>
-    <a href="index.php" class="btn-back flex">
-      <span class="material-icons-sharp">arrow_back_ios</span>
-    </a>
+    <header class="navbar-dashboard flex">
+      <a href="index.php" class="btn-back"><span class="material-icons-sharp">arrow_back_ios</span></a>
+      <a href="logout.php" class="btn-logout">Logout</a>
+    </header>
     <div class="wrapper">
     
         <div class="flex">
